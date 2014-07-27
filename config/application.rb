@@ -21,3 +21,6 @@ module Shouter
     # config.i18n.default_locale = :de
   end
 end
+
+
+# possible issue here with strong params and white listed stuff, from thoughtbot video 1
