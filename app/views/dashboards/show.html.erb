@@ -1,1 +1,6 @@
-Dashboard
+<%= form_for :shout do |form| %>
+	<%= form.text_field :body, placeholder: 'Note content here' %>
+	<%= form.submit 'Post Note!' %>
+	<% end %>
+
+	<%= render @notes %>
