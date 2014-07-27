@@ -1,5 +1,6 @@
 class DashboardsController < ApplicationController
  def show
- 	@notes = []
+ 	@note = Note.new 
+ 	@notes = current_user.notes
  end
 end
