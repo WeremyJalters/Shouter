@@ -1,4 +1,7 @@
 <%= div_for note do %>
-<%= shout.user.username %>
+<%= link_to note.user.username, note.user %>
+said
  <%= note.body %>
+ <%= link_to time_ago_in_words(note.created_at), note %>
+
  <% end %>
