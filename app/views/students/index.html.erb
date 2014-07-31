@@ -1,1 +1,7 @@
 Your Student List
+
+<%= simple_form_for @student do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.button :submit %>
+<% end %>

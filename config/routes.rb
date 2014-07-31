@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :books
+
   resource :dashboard, only: [:show]
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create, :show]
