@@ -5,3 +5,10 @@ Your Student List
   <%= f.input :last_name %>
   <%= f.button :submit %>
 <% end %>
+
+<% @students.each do |s| %>
+<table>
+
+</table>
+	<%= link_to "#{s.first_name} #{s.last_name}", student_path(s) %>
+<% end %>

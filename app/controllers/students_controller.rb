@@ -6,6 +6,7 @@ class StudentsController < ApplicationController
 
 	def create
 		student = Student.new(student_parameters)
+		student.user_id = current_user.id
 		if student.save
 			redirect_to student
 	    else
@@ -13,8 +14,9 @@ class StudentsController < ApplicationController
 	    end
 	end
 
+
     def index
-		@students = Student.all
+		@students = Student.where("user_id = ?",current_user.id)
 		@student = Student.new	
 	end
 
