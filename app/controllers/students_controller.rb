@@ -2,6 +2,7 @@ class StudentsController < ApplicationController
 
 	def show
 		@student = Student.find(params[:id])
+		@book = Book.new
 	end
 
 	def create

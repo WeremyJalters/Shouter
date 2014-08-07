@@ -9,6 +9,7 @@ Your Student List
 <% @students.each do |s| %>
 <table>
 
-</table>
+
 	<%= link_to "#{s.first_name} #{s.last_name}", student_path(s) %>
+</table>
 <% end %>
