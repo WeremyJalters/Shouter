@@ -2,7 +2,8 @@ class StudentsController < ApplicationController
 
 	def show
 		@student = Student.find(params[:id])
-		@book = Book.new
+		@books = Book.where("student_id = ?",@student.id)
+        @book = Book.new  
 	end
 
 	def create

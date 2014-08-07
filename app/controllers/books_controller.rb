@@ -4,7 +4,9 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    @books = Book.where("user_id = ?",current_user.id)
+    @books = Book.new  
+    
   end
 
   # GET /books/1
@@ -25,7 +27,6 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = Book.new(book_params)
-
     respond_to do |format|
       if @book.save
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
@@ -69,6 +70,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:book_name, :book_level, :total_words, :words_wrong, :self_corrections)
+      params.require(:book).permit(:book_name, :book_level, :total_words, :words_wrong, :self_corrections, :student_id)
     end
 end

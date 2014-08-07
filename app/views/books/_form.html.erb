@@ -2,11 +2,14 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :student_id, :as => :hidden, :input_html => { :value => @student.id } %>
     <%= f.input :book_name %>
     <%= f.input :book_level %>
     <%= f.input :total_words %>
     <%= f.input :words_wrong %>
     <%= f.input :self_corrections %>
+
+
   </div>
 
   <div class="form-actions">

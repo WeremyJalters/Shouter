@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140804235830) do
+ActiveRecord::Schema.define(version: 20140807002543) do
 
   create_table "books", force: true do |t|
     t.string   "book_name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140804235830) do
     t.integer  "self_corrections"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "student_id"
   end
 
   create_table "notes", force: true do |t|
