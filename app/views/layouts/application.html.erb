@@ -8,9 +8,7 @@
 </head>
 <body>
  
-
-
-   <div>
+<div>
 	<% if signed_in? %>
 	  <%= link_to current_user.username, dashboard_path %>
 	  <%= link_to 'Student list', students_path %>
@@ -22,6 +20,10 @@
    </div>
 
 <%= yield %>
+
+
+   
+
 
 </body>
 </html>

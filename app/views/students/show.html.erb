@@ -1,4 +1,4 @@
-Students Data
+<h2>Students Data</h2>
 
 <br>
 <%= @student.first_name %> <%= @student.last_name %>
@@ -11,4 +11,7 @@ Students Data
   
 
 <% @books.each do |b| %>
+<br>
+ <%= link_to "#{b.book_name}" "#{b.book_level}", book_path(b)%>
+ </br>
 <%end%>

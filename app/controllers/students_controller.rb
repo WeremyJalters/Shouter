@@ -2,7 +2,7 @@ class StudentsController < ApplicationController
 
 	def show
 		@student = Student.find(params[:id])
-		@books = Book.where("student_id = ?",@student.id)
+		@books = Book.where(student_id: params[:id])
         @book = Book.new  
 	end
 
