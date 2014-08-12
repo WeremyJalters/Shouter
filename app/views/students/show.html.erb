@@ -6,12 +6,14 @@
 
 <%= render :partial => "books/form" %>
 
+<%= render :partial => "lessons/form" %>
+
 
 
   
 
 <% @books.each do |b| %>
 <br>
- <%= link_to "#{b.book_name}" "#{b.book_level}", book_path(b)%>
+ <%= link_to "#{b.book_name}" "#{b.book_level}", student_book_path(@student,b)%>
  </br>
 <%end%>

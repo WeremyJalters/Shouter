@@ -25,5 +25,15 @@
   <%= @book.self_corrections %>
 </p>
 
+<p>
+  <strong>Accuracy:</strong>
+  <%= @book.accuracy %>
+</p>
+
+<p>
+ <strong>Self Correction Rate:</strong>
+  <%= @book.scrate %>
+ </p>
+
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

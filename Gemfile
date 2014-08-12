@@ -21,6 +21,8 @@ gem 'autoprefixer-rails'
 gem 'twitter-bootstrap-rails'
 gem "therubyracer"
 gem "less-rails"
+gem "axlsx"
+gem "acts_as_xlsx"
 
 
 # Use jquery as the JavaScript library

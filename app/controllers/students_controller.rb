@@ -4,6 +4,7 @@ class StudentsController < ApplicationController
 		@student = Student.find(params[:id])
 		@books = Book.where(student_id: params[:id])
         @book = Book.new  
+        @lesson = Lesson.new
 	end
 
 	def create
