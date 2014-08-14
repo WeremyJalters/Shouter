@@ -8,9 +8,7 @@ Rails.application.routes.draw do
   resources :notes, only: [ :create, :show]
 
   resources :students do
-    resources :lessons do
       resources :books
-    end
   end
 
 

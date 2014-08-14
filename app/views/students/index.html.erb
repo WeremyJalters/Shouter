@@ -1,10 +1,14 @@
-Your Student List
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+<h1>Your Student List</h1>
 
 <%= simple_form_for @student do |f| %>
-  <%= f.input :first_name %>
+  <%= f.input :first_name %> 
   <%= f.input :last_name %>
   <%= f.button :submit %>
 <% end %>
+  </div>
 
 <% @students.each do |s| %>
 <table>
@@ -13,3 +17,4 @@ Your Student List
 	<%= link_to "#{s.first_name} #{s.last_name}", student_path(s) %>
 </table>
 <% end %>
+</div>

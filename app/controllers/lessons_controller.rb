@@ -13,6 +13,10 @@ before_action :set_lesson, only: [:show, :edit, :update, :destroy]
   # GET /books/1
   # GET /books/1.json
   def show
+    @student = Student.find(params[:id])
+    @books = Book.where(student_id: params[:id])
+    @book = Book.new  
+    @lesson = Lesson.new
   end
 
   # GET /books/new
@@ -30,7 +34,7 @@ before_action :set_lesson, only: [:show, :edit, :update, :destroy]
     @lesson = Lesson.new(lesson_params)
     respond_to do |format|
       if @lesson.save
-        format.html { redirect_to @lesson, notice: 'You have created a lesson' }
+        format.html { redirect_to student_lesson_path(params[:lesson][:student_id] , @lesson.id), notice: 'You have created a lesson' }
         format.json { render :show, status: :created, location: @lesson }
       else
         format.html { render :new }
