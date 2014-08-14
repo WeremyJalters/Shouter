@@ -1,3 +1,6 @@
+
+
+
 <%= form_for :session, url: session_path do |form| %>
   <div>
     <%= form.label :email %>
@@ -11,4 +14,18 @@
     <%= form.submit "Sign in" %>
     
   </div>
+
 <% end %>
+
+<%= simple_form_for :session, url: session_path  do |form| %>
+
+  <%= form.input :email, placeholder: 'Enter email' %>
+
+  <%= form.input :password, placeholder: 'Password' %>
+
+  
+
+  <%= form.button :submit %>
+<% end %>
+
+    
